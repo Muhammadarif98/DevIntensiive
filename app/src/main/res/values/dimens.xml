@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <dimens name="activity_horizontal_margin">16dp</dimens>
+        <dimens name="activity_vertical_margin">16dp</dimens>
+
+
+        <!-- Size -->
+        <dimens name="size_small">24dp</dimens>
+        <dimens name="size_medium">56dp</dimens>
+        <dimens name="size_large">72dp</dimens>
+
+        <!-- Spaces -->
+        <dimens name="spaces_small">8dp</dimens>
+        <dimens name="spaces_normal">16dp</dimens>
+        <dimens name="spaces_medial">24dp</dimens>
+        <dimens name="spaces_medium">32dp</dimens>
+        <dimens name="spaces_large">56dp</dimens>
+        <dimens name="spaces_larger">72dp</dimens>
+</resources>
