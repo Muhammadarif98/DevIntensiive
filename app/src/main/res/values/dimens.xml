@@ -5,15 +5,15 @@
 
 
         <!-- Size -->
-        <dimen name="size_small">24dp</dimen>
-        <dimen name="size_medium">56dp</dimen>
-        <dimen name="size_large">72dp</dimen>
+        <dimen name="size_small_24">24dp</dimen>
+        <dimen name="size_medium_56">56dp</dimen>
+        <dimen name="size_large_72">72dp</dimen>
 
         <!-- Spaces -->
-        <dimen name="spaces_small">8dp</dimen>
-        <dimen name="spaces_normal">16dp</dimen>
-        <dimen name="spaces_medial">24dp</dimen>
-        <dimen name="spaces_medium">32dp</dimen>
-        <dimen name="spaces_large">56dp</dimen>
-        <dimen name="spaces_larger">72dp</dimen>
+        <dimen name="spaces_small_8">8dp</dimen>
+        <dimen name="spaces_normal_16">16dp</dimen>
+        <dimen name="spaces_medial_24">24dp</dimen>
+        <dimen name="spaces_medium_32">32dp</dimen>
+        <dimen name="spaces_large_56">56dp</dimen>
+        <dimen name="spaces_larger_72">72dp</dimen>
 </resources>

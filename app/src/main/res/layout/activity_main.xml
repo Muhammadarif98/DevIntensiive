@@ -7,20 +7,43 @@
                 tools:context=".ui.activities.MainActivity">
     <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-        android:orientation="horizontal">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/spaces_small_8"
+    android:layout_marginBottom="@dimen/spaces_small_8" >
         <ImageView
-            android:layout_width="@values/size_small"
-            android:layout_height="match_parent">
+            style="@style/icon.left"
+            android:src="@drawable/ic_call_black_24dp">
         </ImageView>
         <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
+          android:layout_width="0dp"
+          android:layout_height="@dimen/size_large_72"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:gravity="center_vertical"
+
+          android:layout_marginLeft="@dimen/spaces_medium_32"
+          android:layout_marginRight="@dimen/spaces_normal_16" >
+            <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Мобильный телефон"
+                    >
+                </EditText>
+          </com.google.android.material.textfield.TextInputLayout>
           </LinearLayout>
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            style="@style/icon.right"
+            android:src="@drawable/ic_phone_in_talk_black_24dp">
         </ImageView>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/light_grey"
+        android:layout_marginLeft="@dimen/spaces_larger_72"/>
 
 </LinearLayout>
