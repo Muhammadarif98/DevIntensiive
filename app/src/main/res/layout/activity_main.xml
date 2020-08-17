@@ -1,10 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/coordinator"
+        android:layout_height="wrap_content"
+        tools:ignore="InvalidId">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="270dp">
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:contentScrim="?attr/colorPrimary">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pri"
+            app:layout_collapseMode="parallax"></ImageView>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:layout_collapseMode="pin"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            tools:ignore="InvalidId">
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+        <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"><![CDATA[
                 tools:context=".ui.activities.MainActivity">
+    ]]>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey"
+        android:orientation="horizontal">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/spaces_larger_72"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/spaces_normal_16"
+                android:text="5 "
+                android:textSize="@dimen/spaces_normal_16" />
+
+            <TextView
+                android:id="@+id/dsc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/spaces_medium_32"
+                android:text="Рейтинг "
+                android:textSize="@dimen/spaces_small_8"
+                app:layout_anchor="@+id/textView"
+                app:layout_anchorGravity="bottom|center" />
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey"></View>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="197dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/spaces_normal_16"
+                android:text="5 "
+                android:textSize="@dimen/spaces_normal_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+               android:layout_marginTop="@dimen/spaces_medium_32"
+                android:text="Колличество строк"
+                android:textSize="@dimen/spaces_small_8" />
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <View
+        android:layout_width="1dp"
+        android:layout_height="72dp"
+        android:background="@color/grey"></View>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/spaces_larger_72"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/spaces_normal_16"
+                android:text="5 "
+                android:textSize="@dimen/spaces_normal_16"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/spaces_medial_24"
+                android:layout_gravity="center"
+                android:text="Проектов"
+                android:textSize="@dimen/spaces_small_8" />
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </LinearLayout>
+
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -30,7 +167,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Мобильный телефон"
+                    android:text="Мобильный телефон"
                     >
                 </EditText>
           </com.google.android.material.textfield.TextInputLayout>
@@ -45,5 +182,166 @@
         android:layout_height="2dp"
         android:background="@color/light_grey"
         android:layout_marginLeft="@dimen/spaces_larger_72"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/spaces_small_8"
+        android:layout_marginBottom="@dimen/spaces_small_8" >
+        <ImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_call_black_24dp">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_large_72"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
 
-</LinearLayout>
+            android:layout_marginLeft="@dimen/spaces_medium_32"
+            android:layout_marginRight="@dimen/spaces_normal_16" >
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-mail"
+                    >
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <ImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_phone_in_talk_black_24dp">
+        </ImageView>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/light_grey"
+        android:layout_marginLeft="@dimen/spaces_larger_72"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/spaces_small_8"
+        android:layout_marginBottom="@dimen/spaces_small_8" >
+        <ImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_call_black_24dp">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_large_72"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+
+            android:layout_marginLeft="@dimen/spaces_medium_32"
+            android:layout_marginRight="@dimen/spaces_normal_16" >
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ВКонтакте"
+                    >
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <ImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_phone_in_talk_black_24dp">
+        </ImageView>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/light_grey"
+        android:layout_marginLeft="@dimen/spaces_larger_72"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/spaces_small_8"
+        android:layout_marginBottom="@dimen/spaces_small_8" >
+        <ImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_call_black_24dp">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_large_72"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+
+            android:layout_marginLeft="@dimen/spaces_medium_32"
+            android:layout_marginRight="@dimen/spaces_normal_16" >
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GIT"
+                    android:enabled="true"
+                    >
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <ImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_phone_in_talk_black_24dp">
+        </ImageView>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/light_grey"
+        android:layout_marginLeft="@dimen/spaces_larger_72"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/spaces_small_8"
+        android:layout_marginBottom="@dimen/spaces_small_8" >
+        <ImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_call_black_24dp">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_large_72"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+
+            android:layout_marginLeft="@dimen/spaces_medium_32"
+            android:layout_marginRight="@dimen/spaces_normal_16" >
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Мобильный телефон"
+                    >
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <ImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_phone_in_talk_black_24dp">
+        </ImageView>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/light_grey"
+        android:layout_marginLeft="@dimen/spaces_larger_72"/>
+</LinearLayout></androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
